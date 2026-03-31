@@ -96,11 +96,10 @@ public class GameManagerUI : MonoBehaviour
         float farestPlayerDis = -Mathf.Infinity;
         SoccerBall farthestBall = null; 
 
-        // 1. Find farthest ball
+        // Find farthest ball
         Vector3 playerPos = Player.Instance.transform.position;
 
-        // 2. Start scan full field
-
+        // Start scan full field
         foreach (SoccerBall currentBall in soccerBallList) {
 
             float sqrDistanceToPlayer = (currentBall.transform.position - playerPos).sqrMagnitude;
@@ -113,7 +112,7 @@ public class GameManagerUI : MonoBehaviour
 
         }
 
-        // 3. After having farthest ball
+        // After having farthest ball
         OnAutoKick?.Invoke(this, new OnAutoKickEventArgs { farthestBall = farthestBall });
 
     }

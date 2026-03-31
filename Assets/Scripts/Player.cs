@@ -108,10 +108,6 @@ public class Player : MonoBehaviour
         }
 
 
-        //// Rotate
-        //transform.forward = Vector3.Slerp(transform.forward, moveDir, playerSO.rotateSpeed * Time.deltaTime);
-
-
         HandleInteractions();
     }
 

@@ -40,7 +40,7 @@ public class SoccerBall : MonoBehaviour
     private void KickControlUI_OnAutoKick(object sender, GameManagerUI.OnAutoKickEventArgs e) {
         
         if (e.farthestBall == this) {
-            // If this is the farthest ball from the player ---> Start move
+            // If this is the farthest ball from the player 
 
             Kicked(FindNearestGoal().transform.position);
         }

@@ -17,7 +17,7 @@ public class SoccerGoal : MonoBehaviour
         if (collision.transform.TryGetComponent<SoccerBall>(out SoccerBall soccerBall)) {
 
             if (this.soccerBall == soccerBall) {
-                // Đảm bảo mỗi ball chỉ được va chạm 1 lần trước khi sút 1 quả khác 
+                // Ensure each ball can only be collided with once before the next shot
 
                 return;
             }
